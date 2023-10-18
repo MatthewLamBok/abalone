@@ -8,7 +8,7 @@ df = pd.read_csv('./data.csv')
 df.isna().mean().to_frame(name='% of missing values') # No missing values
 df = pd.get_dummies(df, columns=['Sex'])
 correlation_matrix = df.corr(method='pearson')
-plt.figure(figsize=(12,8))
+plt.figure(figsize=(20,8))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0)
 plt.title('Feature Correlation')
 plt.show()
