@@ -1,12 +1,20 @@
 
+
 import h2o
 from h2o.automl import H2OAutoML
+from info import normalization
+import pandas as pd
+
 
 # 1. Initialize H2O:
 h2o.init()
 
 # 2. Load data into H2O:
-df_h2o = h2o.import_file('./data.csv')
+df = pd.read_csv('./data.csv')
+
+normalization_type = 'MinMaxScaler'
+df = normalization(df, normalization_type)
+df_h2o = h2o.H2OFrame(df)
 
 # 3. Split data into train, validation, and test set:
 train, valid, test = df_h2o.split_frame(ratios=[0.7, 0.15], seed=42)
@@ -17,8 +25,8 @@ response = "Sex"
 print(predictors)
 
 # 5. Run H2O AutoML:
-aml = H2OAutoML(max_models=30000000, 
-                max_runtime_secs=1200000,  # or however long you want it to run
+aml = H2OAutoML(max_models=30, 
+                max_runtime_secs=120,  
                 seed=42)
 aml.train(x=predictors, y=response, training_frame=train, validation_frame=valid)
 

@@ -1,0 +1,74 @@
+Cross Validation Metrics Summary:
+Cross-Validation Metrics Summary: 
+                         mean      sd          cv_1_valid    cv_2_valid    cv_3_valid    cv_4_valid    cv_5_valid
+-----------------------  --------  ----------  ------------  ------------  ------------  ------------  ------------
+accuracy                 0.556959  0.0211699   0.539898      0.547619      0.571429      0.586735      0.539116
+auc                      nan       0           nan           nan           nan           nan           nan
+err                      0.443041  0.0211699   0.460102      0.452381      0.428571      0.413265      0.460884
+err_count                260.6     12.5419     271           266           252           243           271
+logloss                  0.858321  0.0108817   0.869526      0.855435      0.854011      0.843803      0.868829
+max_per_class_error      0.605696  0.00938252  0.602339      0.607955      0.59116       0.61244       0.614583
+mean_per_class_accuracy  0.559642  0.0198099   0.543188      0.542784      0.567085      0.590251      0.554899
+mean_per_class_error     0.440358  0.0198099   0.456812      0.457216      0.432915      0.409749      0.445101
+mse                      0.313239  0.00495466  0.317728      0.310506      0.31034       0.308264      0.319356
+pr_auc                   nan       0           nan           nan           nan           nan           nan
+r2                       0.533715  0.00902233  0.531026      0.52567       0.528293      0.534947      0.54864
+rmse                     0.559663  0.00442105  0.563674      0.55723       0.557082      0.555215      0.565116
+
+
+Performance on Validation Set:
+ModelMetricsMultinomial: xgboost
+
+** Reported on test data. **
+
+MSE: 0.30876345954921514
+RMSE: 0.5556648806152996
+LogLoss: 0.8368489120934828
+Mean Per-Class Error: 0.4442408781694496
+AUC table was not computed: it is either disabled (model parameter 'auc_type' was set to AUTO or NONE) or the domain size exceeds the limit (maximum is 50 domains).
+AUCPR table was not computed: it is either disabled (model parameter 'auc_type' was set to AUTO or NONE) or the domain size exceeds the limit (maximum is 50 domains).
+
+Confusion Matrix: Row labels: Actual class; Column labels: Predicted class
+F    I    M    Error     Rate
+---  ---  ---  --------  ---------
+65   19   92   0.630682  111 / 176
+17   144  19   0.2       36 / 180
+81   42   122  0.502041  123 / 245
+163  205  233  0.449251  270 / 601
+
+Top-3 Hit Ratios: 
+k    hit_ratio
+---  -----------
+1    0.550749
+2    0.915141
+3    1
+
+
+
+
+Performance on Test Set:
+ModelMetricsMultinomial: xgboost
+** Reported on test data. **
+
+MSE: 0.30416185884868735
+RMSE: 0.5515087114893901
+LogLoss: 0.8347365412196909
+Mean Per-Class Error: 0.46632383873714645
+AUC table was not computed: it is either disabled (model parameter 'auc_type' was set to AUTO or NONE) or the domain size exceeds the limit (maximum is 50 domains).
+AUCPR table was not computed: it is either disabled (model parameter 'auc_type' was set to AUTO or NONE) or the domain size exceeds the limit (maximum is 50 domains).
+
+Confusion Matrix: Row labels: Actual class; Column labels: Predicted class
+F    I    M    Error     Rate
+---  ---  ---  --------  ---------
+70   21   111  0.653465  132 / 202
+14   163  34   0.227488  48 / 211
+80   35   107  0.518018  115 / 222
+164  219  252  0.464567  295 / 635
+
+Top-3 Hit Ratios: 
+k    hit_ratio
+---  -----------
+1    0.535433
+2    0.894488
+3    1
+
