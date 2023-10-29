@@ -7,6 +7,7 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
 #Normalization
 def normalization(df, normalization_type):
+    print(" testests set")
     sex_column = df['Sex']
     df_without_sex = df.drop('Sex', axis=1)
     if normalization_type == "MinMaxScaler":
