@@ -1,4 +1,6 @@
-Hello, This is the code for abalone Classificaton for BME 8603
+Hello, VOID THIS CODE
+
+ This is the code for abalone Classificaton for BME 8603
 
 MAIN CODE: https://github.com/MatthewLamBok/BME_8603/blob/main/python_code/main_pycaret.ipynb
 
